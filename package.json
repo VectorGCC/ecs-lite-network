@@ -3,8 +3,8 @@
     "author": "Karim",
     "displayName": "LeoECS Lite Network",
     "description": "LeoECS Lite Network - легковесный ECS-фреймворк, основанный на структурах. С поддержкой сетевых операций через Mirror.",
-    "unity": "2020.3",
-    "version": "2024.5.22",
+    "unity": "2023.2",
+    "version": "0.0.1",
     "keywords": [
         "leoecslite",
         "leoecs",
