@@ -13,7 +13,10 @@
         "network",
         "mirror"
     ],
-    "dependencies": {},
+    "dependencies": {
+        "com.leopotam.ecslite": "https://github.com/Leopotam/ecslite.git",
+        "com.annulusgames.unity-codegen": "https://github.com/AnnulusGames/UnityCodeGen.git?path=/Assets/UnityCodeGen"
+    },
     "repository": {
         "type": "git",
         "url": "https://github.com/karim-dev-coder/ecs-lite-network.git"
