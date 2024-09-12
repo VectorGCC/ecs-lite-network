@@ -1,6 +1,6 @@
 {
-    "name": "com.leopotam.ecslite",
-    "author": "Leopotam",
+    "name": "com.leopotam.ecslite.network",
+    "author": "Karim",
     "displayName": "LeoECS Lite Network",
     "description": "LeoECS Lite Network - легковесный ECS-фреймворк, основанный на структурах. С поддержкой сетевых операций через Mirror.",
     "unity": "2020.3",
