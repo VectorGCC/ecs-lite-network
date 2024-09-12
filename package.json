@@ -1,0 +1,21 @@
+{
+    "name": "com.leopotam.ecslite",
+    "author": "Leopotam",
+    "displayName": "LeoECS Lite Network",
+    "description": "LeoECS Lite Network - легковесный ECS-фреймворк, основанный на структурах. С поддержкой сетевых операций через Mirror.",
+    "unity": "2020.3",
+    "version": "2024.5.22",
+    "keywords": [
+        "leoecslite",
+        "leoecs",
+        "ecs",
+        "performance",
+        "network",
+        "mirror"
+    ],
+    "dependencies": {},
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/karim-dev-coder/ecs-lite-network.git"
+    }
+}
