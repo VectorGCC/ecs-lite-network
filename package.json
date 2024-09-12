@@ -14,8 +14,8 @@
         "mirror"
     ],
     "dependencies": {
-        "com.leopotam.ecslite": "https://github.com/Leopotam/ecslite.git",
-        "com.annulusgames.unity-codegen": "https://github.com/AnnulusGames/UnityCodeGen.git?path=/Assets/UnityCodeGen"
+        "com.leopotam.ecslite": "2024.5.22",
+        "com.annulusgames.unity-codegen": "1.0.0"
     },
     "repository": {
         "type": "git",
