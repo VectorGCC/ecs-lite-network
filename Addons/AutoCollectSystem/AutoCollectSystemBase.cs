@@ -1,6 +1,6 @@
 using Leopotam.EcsLite;
 
-public class SystemAutoCollectBase
+public class AutoCollectSystemBase
 {
     public virtual void AddAutoCollectSystems(EcsSystems systems)
     {
