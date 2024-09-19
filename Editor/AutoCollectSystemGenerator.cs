@@ -1,6 +1,14 @@
+using System.Reflection;
 using System.Text;
+using SevenBoldPencil.EasyEvents;
 using UnityCodeGen;
 using UnityEditor;
+using UnityEngine;
+
+[CreateAssetMenu(fileName = "UnityGeneratorSettings", menuName = "Moba World/UnityCodeGen/UnityGeneratorSettings")]
+public class UnityGeneratorSettings : ScriptableObject
+{
+}
 
 [Generator]
 public class AutoCollectSystemGenerator : ICodeGenerator
@@ -13,7 +21,7 @@ public class AutoCollectSystemGenerator : ICodeGenerator
         sb.AppendLine("using Leopotam.EcsLite;");
         sb.AppendLine("public partial class AutoCollectSystem : AutoCollectSystemBase");
         sb.AppendLine("{");
-        sb.AppendLine("public override void AddAutoCollectSystems(EcsSystems systems)");
+        sb.AppendLine("public override EcsSystems AddAutoCollectSystems(EcsSystems systems)");
         sb.AppendLine("{");
 
         var types = TypeCache.GetTypesWithAttribute<AutoCollectSystemAttribute>();
@@ -23,9 +31,12 @@ public class AutoCollectSystemGenerator : ICodeGenerator
             sb.AppendLine("systems.Add(new " + name + "());");
         }
 
+        sb.AppendLine("return systems;");
+
         sb.AppendLine("}");
         sb.AppendLine("}");
 
+        context.OverrideFolderPath(CodeGeneratorHelper.GetCodeGenFolderPath(GetType()));
         context.AddCode("AutoCollectSystem.Generated.cs", sb.ToString());
     }
 }

@@ -1,9 +1,10 @@
 using System.Text;
+using SevenBoldPencil.EasyEvents;
 using UnityCodeGen;
 using UnityEditor;
 
 [Generator]
-public class EntityViewSyncVarComponentsGenerator : ICodeGenerator
+public class NetworkSyncViewsVarsGenerator : ICodeGenerator
 {
     public void Execute(GeneratorContext context)
     {
@@ -60,6 +61,7 @@ public class EntityViewSyncVarComponentsGenerator : ICodeGenerator
 
         sb.AppendLine("}");
 
+        context.OverrideFolderPath(CodeGeneratorHelper.GetCodeGenFolderPath(GetType()));
         context.AddCode("EntityView.SyncVarComponents.Generated.cs", sb.ToString());
     }
 }
