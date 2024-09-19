@@ -61,7 +61,7 @@ public class NetworkSyncViewsVarsGenerator : ICodeGenerator
 
         sb.AppendLine("}");
 
-        context.OverrideFolderPath(CodeGeneratorHelper.GetCodeGenFolderPath(GetType()));
+        context.OverrideFolderPath(LeoEcsNetworkCodeGen.GetCodeGenPath());
         context.AddCode("EntityView.SyncVarComponents.Generated.cs", sb.ToString());
     }
 }

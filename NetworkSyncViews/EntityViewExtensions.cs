@@ -3,7 +3,7 @@ using UnityEngine;
 
 public static class EntityViewExtensions
 {
-    public static void InstantiateView(this EntityRW entity, EntityView prefabView)
+    public static void InstantiateView(this EntityRW entity, EntityViewBase prefabView)
     {
         var view = Object.Instantiate(prefabView);
         view.Init(entity);

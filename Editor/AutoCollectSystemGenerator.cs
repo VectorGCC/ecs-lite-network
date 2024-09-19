@@ -36,7 +36,7 @@ public class AutoCollectSystemGenerator : ICodeGenerator
         sb.AppendLine("}");
         sb.AppendLine("}");
 
-        context.OverrideFolderPath(CodeGeneratorHelper.GetCodeGenFolderPath(GetType()));
+        context.OverrideFolderPath(LeoEcsNetworkCodeGen.GetCodeGenPath());
         context.AddCode("AutoCollectSystem.Generated.cs", sb.ToString());
     }
 }
