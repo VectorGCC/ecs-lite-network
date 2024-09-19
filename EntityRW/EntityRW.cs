@@ -33,7 +33,7 @@ public struct EntityRW
         if (World.GetPool<T>().Has(Entity))
             return World.GetPool<T>().Get(Entity);
         else
-            return default;
+            throw new System.Exception($"Entity {Entity} does not have component {typeof(T).Name}");
     }
 
     public bool Has<T>() where T : struct

@@ -17,6 +17,12 @@ public struct QueryBuilder
         return this;
     }
 
+    public QueryBuilder With<T1, T2>() where T1 : struct where T2 : struct
+    {
+        _filerMask = _world.Filter<T1>().Inc<T2>();
+        return this;
+    }
+
     public Enumerator GetEnumerator()
     {
         return new Enumerator(_filerMask.End());

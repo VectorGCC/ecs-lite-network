@@ -1,12 +1,6 @@
 using System.Text;
 using UnityCodeGen;
 using UnityEditor;
-using UnityEngine;
-
-[CreateAssetMenu(fileName = "UnityGeneratorSettings", menuName = "Moba World/UnityCodeGen/UnityGeneratorSettings")]
-public class UnityGeneratorSettings : ScriptableObject
-{
-}
 
 [Generator]
 public class AutoCollectSystemGenerator : ICodeGenerator
@@ -22,7 +16,7 @@ public class AutoCollectSystemGenerator : ICodeGenerator
         sb.AppendLine("public override EcsSystems AddAutoCollectSystems(EcsSystems systems)");
         sb.AppendLine("{");
 
-        var types = TypeCache.GetTypesWithAttribute<AutoCollectSystemAttribute>();
+        var types = TypeCache.GetTypesWithAttribute<EcsSystemAttribute>();
         foreach (var type in types)
         {
             var name = type.FullName;

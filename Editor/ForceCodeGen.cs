@@ -1,4 +1,6 @@
 using UnityCodeGen;
+using UnityEditor;
+using UnityEditor.AssetImporters;
 using UnityEditor.Callbacks;
 
 public class ForceCodeGen
