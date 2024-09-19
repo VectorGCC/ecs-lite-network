@@ -1,6 +1,4 @@
-using System.Reflection;
 using System.Text;
-using SevenBoldPencil.EasyEvents;
 using UnityCodeGen;
 using UnityEditor;
 using UnityEngine;
